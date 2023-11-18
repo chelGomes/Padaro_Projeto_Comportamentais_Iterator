@@ -1,20 +1,20 @@
 public class MenuItem {
-    private String nome;
+    private String nomeProduto;
     private double preco;
     private boolean disponivel;
 
-    public MenuItem(String nome, double preco, boolean disponivel) {
-        this.nome = nome;
+    public MenuItem(String nomeProduto, double preco, boolean disponivel) {
+        this.nomeProduto = nomeProduto;
         this.preco = preco;
         this.disponivel = disponivel;
     }
 
-    public String getNome() {
-        return nome;
+    public String getNomeProduto() {
+        return nomeProduto;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNomeProduto(String nomeProduto) {
+        this.nomeProduto = nomeProduto;
     }
 
     public double getPreco() {
