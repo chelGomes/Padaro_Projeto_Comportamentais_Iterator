@@ -6,10 +6,10 @@ public class MenuTest {
     @Test
     void deveContarProdutosRestaurante() {
         Restaurante restaurante = new Restaurante(
-                new MenuItem("salada", '5',true),
-                new MenuItem("lasanha", '7',true),
-                new MenuItem("feijoada", '9',false),
-                new MenuItem("peixe", '',true)
+                new MenuItem("salada", true),
+                new MenuItem("lasanha",true),
+                new MenuItem("feijoada", false),
+
         );
         assertEquals(3, Restaurante.contarItensDisponiveis(restaurante));
     }
@@ -17,10 +17,9 @@ public class MenuTest {
     @Test
     void deveContarTotalItens() {
         Restaurante restaurante = new Restaurante(
-                new MenuItem("feijao", '7',true),
-                new MenuItem("arroz",'9' ,true),
-                new MenuItem("macarrao", '6',false),
-                new MenuItem("carne",'' ,true)
+                new MenuItem("feijao", true),
+                new MenuItem("arroz",true),
+                new MenuItem("macarrao", false),
         );
         assertEquals(4, Restaurante.contarTotalItens(restaurante));
     }
