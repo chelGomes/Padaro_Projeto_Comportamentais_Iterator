@@ -5,22 +5,22 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class MenuTest {
     @Test
     void deveContarProdutosRestaurante() {
-        Restaurante restaurante = new Restaurante(
+        Menu menu = new Menu(
                 new MenuItem("salada", true),
                 new MenuItem("lasanha",true),
-                new MenuItem("feijoada", false),
+                new MenuItem("feijoada", false)
 
         );
-        assertEquals(3, Restaurante.contarItensDisponiveis(restaurante));
+        assertEquals(3, Restaurante.contarItensDisponiveis(menu));
     }
 
     @Test
     void deveContarTotalItens() {
-        Restaurante restaurante = new Restaurante(
+       Menu menu = new Menu(
                 new MenuItem("feijao", true),
                 new MenuItem("arroz",true),
-                new MenuItem("macarrao", false),
+                new MenuItem("macarrao", false)
         );
-        assertEquals(4, Restaurante.contarTotalItens(restaurante));
+        assertEquals(4, Restaurante.contarTotalItens(menu));
     }
 }

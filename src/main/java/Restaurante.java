@@ -1,7 +1,7 @@
 import java.util.Iterator;
 
 public class Restaurante {
-    public static int contarItensDisponiveis(Restaurante menu) {
+    public static int contarItensDisponiveis(Menu menu) {
         int quantidade = 0;
         for (MenuItem menuItem : menu) {
             if (menuItem.isDisponivel()) {
@@ -11,11 +11,11 @@ public class Restaurante {
         return quantidade;
     }
 
-    public static int contarTotalItens(Restaurante menu) {
+    public static int contarTotalItens(Menu menu) {
         int quantidade = 0;
-        for (Iterator<MenuItem> iterator = menu.iterator(); iterator.hasNext();) {
+        for (Iterator c = menu.iterator(); c.hasNext();) {
             quantidade++;
-            iterator.next();
+            c.next();
         }
         return quantidade;
     }
